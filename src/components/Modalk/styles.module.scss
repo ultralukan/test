@@ -1,0 +1,247 @@
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-1-down {
+  @media (max-width: 800px) { @content; }
+}
+@mixin for-tablet-landscape-1-up {
+  @media (min-width: 800px) { @content; }
+}
+@mixin for-tablet-landscape-2-down {
+  @media (max-width: 1000px) { @content; }
+}
+@mixin for-tablet-landscape-2-up {
+  @media (min-width: 1000px) { @content; }
+}
+@mixin for-desktop-down {
+  @media (max-width: 1200px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1500px) { @content; }
+}
+
+.modal {
+  overflow: scroll;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  width: 70%;
+  color: #FFF;
+  box-shadow: 20px 20px 19px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 50px;
+  border: 2px solid #FF6017;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 70px;
+    font-family: 'Raleway';
+    font-style: italic;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: 0.065em;
+
+    @include for-tablet-landscape-1-down {
+      margin-bottom: 50px;
+    }
+    @include for-tablet-landscape-1-up {
+      font-size: 28px;
+    }
+
+    @include for-desktop-up {
+      margin-bottom: 80px;
+      font-size: 32px;
+    }
+
+    @include for-big-desktop-up {
+      margin-bottom: 100px;
+    }
+
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    @include for-tablet-landscape-2-up {
+      width: 60%;
+    }
+
+    @include for-desktop-up {
+      width: 50%;
+    }
+  }
+
+  input {
+    margin-bottom: 40px;
+    height: 28px;
+    background-color : #000000;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    transition: 100ms;
+    color: #FFFFFF;
+    font-family: 'Raleway';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.065em;
+  }
+
+  textarea {
+    margin: 20px 0 80px;
+    height: 70px;
+    background-color : #000000;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    transition: 100ms;
+    color: #FFFFFF;
+    font-family: 'Raleway';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.065em;
+    resize: none;
+  }
+
+  textarea::placeholder {
+    position: absolute;
+    bottom: 5px;
+  }
+
+  input:focus, textarea:focus
+  {
+    border-bottom: 2px solid #FF6017;
+    outline-offset: 0px;
+    outline: none;
+  }
+
+  input {
+    padding: 10px;
+  }
+
+  input[required]::placeholder {
+    color: red;
+  }
+}
+
+
+.button {
+  text-align: center;
+
+  a {
+    border: none;
+    cursor: pointer;
+
+    button {
+      background-color: #FF6017 !important;
+      cursor: pointer;
+      padding: 15px 30px;
+      border-radius: 0px 10px;
+      border: none;
+      color: #FFFFFF;
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.065em;
+      height: 100%;
+      transition: all 0.3s;
+    }
+    button:hover {
+      transform: scale(1.1);
+      color: black;
+    }
+  }
+}
+
+.icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: var(--c-color-main);
+  img {
+    width: 60px;
+  }
+
+  @include for-tablet-portrait-up {
+    right: -2%;
+    bottom: -5%;
+  }
+
+  @include for-phone-only {
+    right: -10%;
+    bottom: -5%;
+
+    img {
+      width: 40px;
+    }
+  }
+}
+
+.ready {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.icon_ready {
+  img {
+    width: 100px;
+  }
+  margin-bottom: 75px;
+}
+
+.icon_ready_logo {
+  img {
+    width: 100px;
+  }
+}
+
+.thx {
+  font-family: 'Raleway';
+  font-style: italic;
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 0.065em;
+  color: #FFFFFF;
+  opacity: 0.6;
+  margin-bottom: 75px;
+}
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.close:hover {
+  scale: (1.2);
+  transition: all 0.3s;
+}
+
+.form {
+  position: relative;
+}
+

@@ -1,0 +1,74 @@
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-1-down {
+  @media (max-width: 800px) { @content; }
+}
+@mixin for-tablet-landscape-1-up {
+  @media (min-width: 800px) { @content; }
+}
+@mixin for-tablet-landscape-2-down {
+  @media (max-width: 1000px) { @content; }
+}
+@mixin for-tablet-landscape-2-up {
+  @media (min-width: 1000px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1500px) { @content; }
+}
+
+
+.logo {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 22px;
+  font-weight: 600;
+  position: absolute;
+
+  @include for-tablet-landscape-1-down{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 10%;
+  }
+
+  @include for-tablet-landscape-1-up{
+    margin: 20px 0 0 20px;
+  }
+
+  @include for-desktop-up{
+    margin: 35px 0 0 50px;
+  }
+
+
+  img {
+    height: 90px;
+
+    @include for-tablet-landscape-1-up{
+      margin-left: -10px;
+    }
+
+    @include for-desktop-up {
+      height: 120px;
+      margin-left: -10px;
+    }
+  }
+
+  div {
+    margin-top: -10px;
+    font-size: 18px;
+
+    @include for-desktop-up {
+      font-size: 22px;
+    }
+  }
+}

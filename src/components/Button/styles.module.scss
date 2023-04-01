@@ -1,0 +1,22 @@
+.button {
+  text-align: center;
+
+  a {
+    color: #FFFFFF;
+    background-color: #FF6017;
+    border-radius: 0px 10px;
+    border: none;
+    padding: 15px 20px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.065em;
+    cursor: pointer;
+    transition: all .3s;
+  }
+  a:hover {
+    background-color: #cb531f;
+  }
+}
