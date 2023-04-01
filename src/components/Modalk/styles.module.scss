@@ -103,7 +103,6 @@
 
   textarea {
     margin: 20px 0 80px;
-    height: 70px;
     background-color : #000000;
     border: none;
     border-bottom: 1px solid #FFFFFF;
@@ -116,11 +115,10 @@
     line-height: 23px;
     letter-spacing: 0.065em;
     resize: none;
-  }
 
-  textarea::placeholder {
-    position: absolute;
-    bottom: 5px;
+    @include for-tablet-portrait-up{
+      height: 70px;
+    }
   }
 
   input:focus, textarea:focus
