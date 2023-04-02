@@ -15,7 +15,7 @@ export default function Banner() {
       <div className={styles.video_container}>
         <video
           src="/bannervideo.mp4"
-          autoPlay loop muted></video>
+          autoPlay muted></video>
       </div>
       <Logo/>
       <Navbar/>
