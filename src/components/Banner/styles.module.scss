@@ -33,3 +33,21 @@
     object-fit: cover;
   }
 }
+
+.video_container {
+  z-index: -1;
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+
+
+  video {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
