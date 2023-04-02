@@ -27,7 +27,6 @@
 }
 
 .about {
-  margin-top: 80px;
   h2 {
     color: #FF6017;
     width: 100%;
@@ -40,12 +39,12 @@
     letter-spacing: 0.065em;
     margin-bottom: 50px;
   }
-  padding: 0 40px;
+  padding: 60px 40px;
   @include for-desktop-up {
-    padding: 0 90px;
+    padding: 80px 90px;
   }
   @include for-big-desktop-up {
-    padding: 0 120px;
+    padding: 80px 120px;
   }
 }
 

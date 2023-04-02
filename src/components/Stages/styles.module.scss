@@ -22,6 +22,12 @@
 @mixin for-big-desktop-up {
   @media (min-width: 1500px) { @content; }
 }
+@mixin for-big-desktop-2-up {
+  @media (min-width: 1900px) { @content; }
+}
+@mixin for-big-desktop-3-up {
+  @media (min-width: 2400px) { @content; }
+}
 
 .stages {
   display: flex;
@@ -29,9 +35,10 @@
   align-items: center;
   color: #FFFFFF;
   background-color: #171818;
-  padding: 15px 25px;
   border-radius: 20px;
   padding: 10px;
+  margin-top: -30px;
+  box-shadow: 0px -5px 7px rgba(0, 0, 0, 0.5);
 
   @include for-phone-only {
     flex-direction: column;
@@ -39,7 +46,6 @@
 
   @include for-tablet-portrait-up {
     padding: 25px;
-
   }
 
   @include for-tablet-landscape-2-up {
@@ -124,6 +130,10 @@
 
   font-size: 16px;
 
+  @include for-phone-only {
+    font-size: 12px;
+  }
+
   @include for-tablet-landscape-2-up {
     font-size: 20px;
   }
@@ -151,6 +161,10 @@
   }
 
   margin-top: 10px;
+}
+
+.numbers {
+  margin-top: 30px;
 }
 
 .aside {

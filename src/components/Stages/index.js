@@ -18,8 +18,10 @@ export default function Stages() {
         <div className={styles.stages_info}>
           <div className={styles.stages_info_comment}>Позвоните нам или оставьте заявку на сайте</div>
           <div className={styles.stages_info_comment}>Мы перезвоним вам в течении 10 минут</div>
-          <div className={styles.stages_info_number}><a href="tel:+79313306062">+7 (931)-330-60-62</a></div>
-          <div className={styles.stages_info_number}><a href="tel:+79219486085">+7 (921)-948-60-85</a></div>
+          <div className={styles.numbers}>
+            <div className={styles.stages_info_number}><a href="tel:+79313306062">+7 (931)-330-60-62</a></div>
+            <div className={styles.stages_info_number}><a href="tel:+79219486085">+7 (921)-948-60-85</a></div>
+          </div>
         </div>
         <div className={styles.btn}>
           <Button />
