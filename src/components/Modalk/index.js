@@ -15,10 +15,6 @@ export default function Modalk({open, onClose}) {
   const handleSubmit = (e) => {
     e.preventDefault()
     setSent(false)
-    setName('')
-    setTel('')
-    setEmail('')
-    setMessage('')
 
     let data = {
       name,
@@ -37,6 +33,10 @@ export default function Modalk({open, onClose}) {
     }).then((res) => {
       if (res.status === 200) {
         setSent(true)
+        setName('')
+        setTel('')
+        setEmail('')
+        setMessage('')
       }
     })
   }
