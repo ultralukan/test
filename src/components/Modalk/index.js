@@ -46,6 +46,12 @@ export default function Modalk({open, onClose}) {
     onClose()
   }
 
+  const handleClick = () => {
+    if(sent) {
+      onClose()
+    }
+  }
+
   useEffect(() => {
     if (sent) {
       setTimeout(handleSent, 5000)
@@ -60,12 +66,13 @@ export default function Modalk({open, onClose}) {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
       className={styles.modal}
+      onClick={handleClick}
     >
       <Box className={styles.box}>
-          <HighlightOffIcon onClick={onClose} className={styles.close} />
         {
           !sent ?
-          (<div className={styles.form}>
+          (
+            <div className={styles.form}>
             <h2>Форма обратной связи</h2>
             <form onSubmit={handleSubmit}>
               <input type="text" id="name" placeholder='Ваше имя или организация' value={name} onChange={(e) => setName(e.target.value)} />
