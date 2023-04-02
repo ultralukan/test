@@ -71,7 +71,8 @@ export default function Modalk({open, onClose}) {
       <Box className={styles.box}>
         {
           !sent ?
-          (
+          ( <div>
+            <HighlightOffIcon onClick={onClose} className={styles.close} />
             <div className={styles.form}>
             <h2>Форма обратной связи</h2>
             <form onSubmit={handleSubmit}>
@@ -89,6 +90,7 @@ export default function Modalk({open, onClose}) {
             </form>
             <div className={styles.icon}>
               <img src='logo_white.svg'/>
+            </div>
             </div>
           </div>):
             (<div className={styles.ready}>
