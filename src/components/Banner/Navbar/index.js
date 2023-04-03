@@ -21,7 +21,7 @@ export default function Navbar() {
         </li>
         <li>
           <Link to="profit" smooth={true} duration={500}>
-            С нами выгодно
+            С нами комфортно
           </Link>
         </li>
       </ul>

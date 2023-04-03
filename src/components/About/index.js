@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 export default function About() {
   return (
     <div name="about"  className={styles.about}>
-      <h2>\\ КОРОТКО О НАС</h2>
+      <h2>\\ О НАС</h2>
       <div className={styles.about_info}>
         <div className={styles.about_image}>
           <img src='about.png'/>

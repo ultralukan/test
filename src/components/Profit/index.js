@@ -3,7 +3,7 @@ import styles from './styles.module.scss'
 export default function Profit() {
   return (
     <div name="profit"  className={styles.profit}>
-      <h2>\\ С НАМИ ВЫГОДНО</h2>
+      <h2>\\ С НАМИ КОМФОРТНО</h2>
       <h3>
         Установка беспроводных встраиваемых зарядных устройств, в различных заведениях, будь то ресторан или бизнес центр, поможет:
       </h3>
