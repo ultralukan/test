@@ -42,7 +42,7 @@
     letter-spacing: 0.065em;
     margin-bottom: 50px;
   }
-  padding: 60px 40px;
+  padding: 60px 40px 40px;
 
   @include for-phone-only {
     padding-top: 0;
@@ -54,12 +54,12 @@
   }
 
   @include for-desktop-up {
-    padding: 80px 90px;
+    padding: 80px 90px 40px;
     width: 75%;
   }
   @include for-big-desktop-up {
     width: 65%;
-    padding: 80px 120px;
+    padding: 80px 120px 40px;
   }
 
   h3 {

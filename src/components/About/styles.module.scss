@@ -41,12 +41,12 @@
     letter-spacing: 0.065em;
     margin-bottom: 50px;
   }
-  padding: 60px 40px;
+  padding: 60px 40px 0;
   @include for-desktop-up {
-    padding: 80px 90px;
+    padding: 80px 90px 0;
   }
   @include for-big-desktop-up {
-    padding: 80px 120px;
+    padding: 80px 120px 0;
   }
 }
 
@@ -125,7 +125,7 @@
     }
 
   }
-  margin-bottom: 60px;
+
 }
 
 .about_text_dots {
