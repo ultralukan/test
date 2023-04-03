@@ -99,7 +99,7 @@
   font-style: normal;
   letter-spacing: 0.065em;
   h3 {
-    margin: 10px 0;
+    margin: 0;
     font-weight: 700;
     line-height: 108%;
     max-width: 400px;
@@ -117,7 +117,6 @@
   div {
     font-weight: 400;
     line-height: 149.9%;
-    margin-top: 10px;
 
     font-size: 16px;
 
@@ -125,9 +124,6 @@
       font-size: 20px;
     }
 
-    @include for-desktop-up {
-      font-size: 22px;
-    }
   }
   margin-bottom: 60px;
 }
@@ -219,4 +215,13 @@
 
 .about_icon {
   margin: 0 auto;
+}
+
+.btn {
+  margin-top: 70px !important;
+
+  @include for-tablet-landscape-2-down {
+    margin-top: 50px !important;
+    text-align: center;
+  }
 }
